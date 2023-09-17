@@ -1,0 +1,8 @@
+set DJANGO_SETTINGS_MODULE=dkr.settings
+celery -A dkrapp worker -l info --without-gossip --pool=solo
+celery --broker=amqp://guest:guest@localhost:5672// flower
+
+
+
+
+
